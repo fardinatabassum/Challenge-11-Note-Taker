@@ -39,6 +39,22 @@ const createNote = (body, noteArr) => {
     return body;
 }
 
+app.delete('/api/notes/:id', (req, res) => {
+    deleteNote(req.params.id, db)
+    res.json(true)
+})
+
+const deleteNote = (id, noteArr) => {
+    for(let i = 0; i < noteArr.length; i++) {
+        if(noteArr[i].id == id) {
+            noteArr.splice(i, 1)
+            fs.writeFileSync(
+                path.join(__dirname, "./db/db.json"),
+                JSON.stringify(noteArr)
+            );
+        }
+    }
+}
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
