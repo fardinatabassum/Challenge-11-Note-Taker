@@ -16,4 +16,4 @@ The assets file contains the screenshot and demo gif of the final webpage webpag
 ## License
 
 Uses the MIT License
-# [![License MIT ](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/M
+# [![License MIT ](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
